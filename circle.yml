@@ -1,6 +1,9 @@
 dependencies:
   pre:
-    - npm i -g reflect-metadata@0.1.2
+    - npm cache clean -f
+    - npm install -g n
+    - n stable
+    - ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node
 
 
 deployment:

@@ -1,0 +1,17 @@
+<div class="container container-fluid">
+    <div class="row harmony-icon">
+        <label><img src="assets/harmonylogo.png" height="13%" width="55%"></label>
+    </div>
+    <br>
+    <div class="email-form-setup">
+        <input type="email" class="inputEmail" [(ngModel)]="user" required>
+        <span class="floating-email">Enter Harmony Email</span>
+    </div>
+    <div class="password-form-setup">
+        <input type="password" class="inputEmail" [(ngModel)]="password" required>
+        <span class="floating-password">Enter Harmony Password</span>
+    </div>
+    <div class="login-button-form-setup">
+        <button type="submit" class="btn btn-lg btn-primary btn-block signin-button" (click)="signed()"><i class="fa fa-lock" aria-hidden="true"></i> Secure Login</button>
+    </div>
+</div>

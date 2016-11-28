@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Cleo Harmony</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/main']"><i class="fa fa-database" aria-hidden="true"></i> Hosts </a></li>
+                <li><a [routerLink]="['/main/scheduler']"><i class="fa fa-clock-o" aria-hidden="true"></i> Scheduler </a>
+                </li>
+                <li><a [routerLink]="['/main/router']"><span class="glyphicon glyphicon-signal"></span> Router </a></li>
+                <li><a [routerLink]="['/main/partners']"><i class="fa fa-users" aria-hidden="true"></i> Partners</a></li>
+                <li><a [routerLink]="['/main/transfers']"><span class="glyphicon glyphicon-transfer"></span> Transfers</a>
+                </li>
+                <li><a [routerLink]="['/main/logs']"><i class="fa fa-history" aria-hidden="true"></i> Logs</a></li>
+                <li><a [routerLink]="['/main/administration']"><span class="glyphicon glyphicon-cog"></span>
+                    Administration</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Account </a>
+                    <ul class="dropdown-menu">
+                        <li><a style="cursor:pointer;" (click)="logout();">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="inner-outlet">
+    <router-outlet></router-outlet>
+</div>

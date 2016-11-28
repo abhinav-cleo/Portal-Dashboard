@@ -1,0 +1,53 @@
+<div class="scroll-bar">
+    <pre class="pre-label">Please fill out the info below and click Export to save the settings into a file that can be imported into your IDP</pre>
+    <hr>
+    <div class="row element-align">
+        <label>Entity ID</label>
+        <input type="text" class="form-control" [(ngModel)]="apiData.EntityId">
+    </div>
+    <div class="row element-align">
+        <label>Name ID Format</label>
+        <select type="email" class="form-control" [(ngModel)]="apiData.idFormat">
+            <option value="Email">Email</option>
+            <option value="UID">UID</option>
+        </select>
+    </div>
+    <div class="row element-align">
+        <label>Assertion Consumer Service Endpoint *</label>
+        <input type="text" class="form-control" [(ngModel)]="apiData.serviceEndpoint" required>
+    </div>
+    <div class="row element-align">
+        <label>Single Logout Service Endpoint *</label><span>(HTTP-Redirect)</span>
+        <input type="text" class="form-control" [(ngModel)]="apiData.logoutEndpoint" required>
+    </div>
+    <label style="color:#1d87c5;background-color:transparent;font-family:Times New Roman;font-size:16px;font-weight:bold">Signing
+        &amp; Encryption</label>
+    <hr>
+    <div class="row element-align">
+        <label>Signing Certificate</label>
+        <input type="text" class="form-control" [(ngModel)]="apiData.signingCertificate">
+    </div>
+    <div class="row element-align">
+        <label>Password</label>
+        <input type="text" class="form-control" [(ngModel)]="apiData.encryptionPassword">
+    </div>
+    <div class="row element-align">
+        <label>Algorithm</label>
+        <select type="email" class="form-control" [(ngModel)]="apiData.encryptionAlgorithm">
+            <option value="SHA1">SHA-1</option>
+            <option value="SHA256">SHA-256</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"><label>Certificate for Encryption</label></div>
+        <div class="col-sm-3"><input type="text" class="form-control" [(ngModel)]="apiData.encryptionCertificate"></div>
+        <div class="col-sm-4">
+            <button class="button-parse" (click)="openSignatureList()">Select Certificate</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-center element-align">
+        <button type="button" class="button-parse-save" (click)="saveData();">Save</button>
+        <button type="button" class="button-parse-save" (click)="apiData.clearForm()">Cancel</button>
+    </div>
+</div>

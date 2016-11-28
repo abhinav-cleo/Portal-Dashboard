@@ -1,0 +1,10 @@
+dependencies:
+  pre:
+    - npm i -g reflect-metadata
+
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: harmonyangular2project

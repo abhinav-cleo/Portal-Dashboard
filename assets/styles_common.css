@@ -1,0 +1,270 @@
+/***** Common Styles for Windows theme ********/
+/* Standard styles FIRST otherwise custom styles don't override */
+html {
+    background-color: white;
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+form {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+    font-size: 12px
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+    font-size: 12px
+}
+
+a:active {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    border: none !important;
+}
+
+a:hover {
+    color: #0083CA;
+    text-decoration: none;
+    font-size: 12px
+}
+
+img {
+    border: 0px;
+    padding: 0px;
+    margin: 0px
+}
+
+/* List (table-based) */
+.listtable {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    border-color: #F0F0F0 #808080 #808080 #F0F0F0;
+    margin: 0;
+    padding: 0
+}
+
+.listtable td {
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+}
+
+/* List (select-based) */
+.list {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    border-color: #F0F0F0 #808080 #808080 #F0F0F0;
+    margin: 0;
+    padding: 0
+}
+
+/* Controls. .button is disabled button, .submit is enabled button */
+.text {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    border-width: 1px;
+    border-color: #A0A0A0 #A0A0A0 #A0A0A0 #A0A0A0;
+    margin: 0;
+    padding: 0
+}
+
+.choice {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    border-color: #F0F0F0 #808080 #808080 #F0F0F0;
+    margin: 0;
+    padding: 0
+}
+
+.combobox {
+    overflow: hidden
+}
+
+.submit {
+    color: black;
+    background-color: #CFCBC4;
+    font-size: 12px;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #F0F0F0 #808080 #808080 #F0F0F0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.toggleButtonSelected {
+    font-weight: normal;
+    border-style: inset
+}
+
+/* width and height have to be defined for IE to not draw padding around the checkbox */
+.checkbox {
+    color: black;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+input.checkbox {
+    width: 13px;
+    height: 13px;
+    border: 0px;
+}
+
+.checkbox a img {
+    vertical-align: middle;
+    padding-right: 4px
+}
+
+.radio {
+    color: black;
+    font-size: 12px;
+    margin: 0px;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+}
+
+input.radio {
+    margin: 0 1px;
+    width: 13px;
+    height: 13px;
+    border: 0px;
+    padding: 0px 3px;
+    display: inline-block;
+    vertical-align: sub;
+    line-height: 14px;
+}
+
+.radio a img {
+    vertical-align: middle;
+    padding-right: 4px
+}
+
+.splitPane {
+    border: 1px solid #C0C0C0
+}
+
+.editorPane {
+    text-align: left;
+    padding: 2px;
+}
+
+.scrollPane {
+}
+
+.toolBar {
+    background-color: #EEECE9;
+}
+
+/* Specifies properties of file upload hack. Needs to be hidden and have huge text size so that IE draws a large browse button */
+.file.hidden {
+    position: relative;
+    -moz-opacity: 0;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    width: 100%;
+    font-size: 100px;
+    z-index: 2;
+    cursor: pointer;
+    direction: rtl;
+}
+
+.label-image {
+    text-align: left;
+}
+
+.tooltip {
+    background-color: #FFFFE1;
+    font-size: 11px;
+    border: solid 1px black;
+    padding: 1px 2px 1px 2px;
+    z-index: 2000
+}
+
+/* Misc */
+.errorMessage {
+    color: red;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 400px;
+    border: 2px outset #808080;
+    display: none
+}
+
+.validationFailed {
+    border: 1px solid #990000
+}
+
+.validationMessage {
+    background-color: yellow;
+    color: #990000;
+    font-size: 12px;
+    padding: 4px;
+    border: 1px solid #FFCC33
+}
+
+.indeterminate-bar {
+    background: transparent url("../../images/ajaxswing/indeterminated.gif") repeat-x scroll left top;
+    border: 1px solid #9C9C9C;
+    height: 11px !important
+}
+
+.cellEditor {
+    background-color: #CEFFCE !important;
+}
+
+.menuText > .tableCell {
+    height: auto
+}
+
+/* Place your custom style definitions and standard overrides here */
+#checkboxopaque {
+    background-color: #EEECE9;
+}
+
+.text, .choice {
+    background-color: white !important;
+}
+
+.monospace {
+    font-family: monospace !important;
+}
+
+/* Special license dialog classes
+--------------------------------------------- */
+.license-info-header {
+    background: #AAAAAA !important;
+    color: black;
+    font-family: monospace;
+    font-size: 12px !important;
+}

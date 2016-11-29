@@ -1,0 +1,69 @@
+/*====================================================
+	- filter classes
+	- edit classes below to change filters style
+=====================================================*/
+.inf {
+    clear: both;
+    width: auto;
+    height: 20px;
+    background: #eeeeee;
+    font-size: 11px;
+    margin: 0;
+    padding: 1px 3px 1px 3px;
+    border: 1px solid #ccc;
+}
+
+.ldiv {
+    float: left;
+    width: 30%;
+    position: inherit;
+}
+
+.mdiv {
+    float: left;
+    width: 30%;
+    position: inherit;
+    text-align: center;
+}
+
+.rdiv {
+    float: right;
+    width: 30%;
+    position: inherit;
+    text-align: right;
+}
+
+.loader {
+    position: absolute;
+    padding: 15px 0 15px 0;
+    margin-top: 7%;
+    width: 200px; /*height:50px;*/
+    left: 40%;
+    z-index: 1000;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #666;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.mdiv select {
+    height: 20px;
+}
+
+div.inf a {
+    color: #CC0000;
+}
+
+div.inf a:hover {
+    text-decoration: none;
+}
+
+.tot {
+    font-weight: bold;
+}
+
+.filterText {
+    width: 100%
+}

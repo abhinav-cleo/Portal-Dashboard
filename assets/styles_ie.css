@@ -1,0 +1,29 @@
+/***** IE-specific styles for Windows theme ********/
+
+.menu {
+    height: 19px;
+}
+
+.menuEnd {
+    height: 19px;
+}
+
+.tabs-nav {
+    display: inline-block;
+}
+
+/* auto clear */
+.tabs-nav .tabs-disabled {
+    position: relative;
+    filter: alpha(opacity=40);
+}
+
+/* fixes opacity */
+.tabs-nav .tabs-disabled a span {
+    _height: 19px; /* for some reason the height is 1px to less with opacity... */
+    min-height: 19px; /* ...in both IE 6 and 7 */
+}
+
+input.text {
+    padding: 0 2px 0 0;
+}

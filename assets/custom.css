@@ -1,0 +1,262 @@
+/* Place your custom style definitions and standard overrides here */
+.table td {
+    border-right: 1px solid #C6C3C6;
+    border-bottom: 1px solid #C6C3C6;
+}
+
+.window {
+    background: #EEECE9;
+}
+
+.tree {
+    background-color: white;
+}
+
+.ui-tabs-panel {
+    background-color: #eeece9;
+}
+
+.tableHeader, .tableHeader a, .tableHeader a:link, .tableHeader a:visited, .tableHeader a:active {
+    font-weight: normal;
+}
+
+a.menuButton:hover {
+    background-color: #0083CA;
+}
+
+a.menuText:hover, a.submenuText:hover {
+    background-color: #0083CA;
+}
+
+.tableSelRow {
+    background-color: #F4D995;
+}
+
+/* .tableSelRow td	{border-color:#F4D995; } */
+.tableSelRow td {
+    border-color: #C6C3C6 !important;
+}
+
+.tableSelRow textarea {
+    background-color: #F4D995 !important;
+}
+
+.tableSelRow div {
+    background-color: #F4D995 !important;
+}
+
+.treeSel {
+    color: black;
+    background-color: #BAD3E6;
+}
+
+#checkboxopaque {
+    background-color: #EEECE9;
+}
+
+.tableCell .checkbox {
+    white-space: nowrap
+}
+
+.tableCell .checkbox label {
+    white-space: nowrap
+}
+
+.text, .choice {
+    background-color: white !important;
+}
+
+.table td .text, .table td .choice {
+    background: white !important;
+}
+
+.ui-tabs-panel .table tr .text[disabled], .ui-tabs-panel .table tr .choice[disabled] {
+    background: transparent !important;
+}
+
+.ui-tabs-panel .table .button table td table {
+    width: 100%;
+}
+
+.ui-tabs-panel .table .button table td table * {
+    text-align: center;
+}
+
+.monospace {
+    font-family: monospace !important;
+}
+
+/* Special license dialog classes 
+--------------------------------------------- */
+.license-info-header {
+    background: #AAAAAA !important;
+    color: black;
+    font-family: monospace;
+    font-size: 12px !important;
+}
+
+.tableTreeElement {
+    white-space: nowrap !important
+}
+
+.tableTreeElement > img, .tableTreeElement > span {
+    float: none !important;
+}
+
+.button-parse{
+    width: 20em;
+    height: 2.5em;
+    background-color: orange;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+
+}
+
+.button-parse-save{
+    width: 10em;
+    height: 2.5em;
+    background-color: orange;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+
+}
+
+.scroll-bar{
+    width: 1000px;
+    height: 600px;
+    overflow: scroll;
+}
+
+.element-align{
+    align-items: center;
+    position: relative;
+    left: 19px;
+    width: 90%;
+}
+
+.pre-label{
+    width: 900px;
+    overflow: scroll;
+}
+
+input:focus ~ .floating-email,
+input:not(:focus):valid ~ .floating-email{
+    bottom: 10px;
+    top:-15px;
+    width: 150%;
+    font-size: 12px;
+    opacity: 1;
+    color:orange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: orange;
+}
+
+.inputEmail {
+    font-size: 20px;
+    top: 25%;
+    width: 40%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: dimgrey;
+}
+
+.email-form-setup input:focus{
+    border-bottom-color:orange;
+}
+
+.floating-email {
+    position: absolute;
+    pointer-events: none;
+    top: 20%;
+    left:0.2%;
+    color: dimgrey;
+    transition: 0.2s ease all;
+}
+
+
+input:focus ~ .floating-password,
+input:not(:focus):valid ~ .floating-password{
+    top:-15px;
+    bottom: 10px;
+    left:0.2%;
+    font-size: 11px;
+    opacity: 1;
+    color:orange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: orange;
+}
+
+.inputPassword {
+    font-size: 20px;
+    margin-top: 20%;
+    width: 250px;
+    height: 35px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: dimgrey;
+}
+
+.password-form-setup input:focus{
+    border-bottom-color:orange;
+}
+
+.floating-password {
+    position: absolute;
+    pointer-events: none;
+    top: 35%;
+    left:0.2%;
+    color: dimgrey;
+    transition: 0.2s ease all;
+}
+
+.harmony-icon{
+    margin-top:15%;
+    position: relative;
+    top: 5%;
+    left: 40%;
+    height: inherit;
+}
+
+.signin-button{
+    background: dimgrey !important;
+}
+
+.email-form-setup{
+    position: relative;
+    top: 30%;
+    left: 23%;
+    margin: 3% 3% 3% 3%;
+}
+
+.password-form-setup{
+    position: relative;
+    top: 37%;
+    left: 23%;
+    margin: 3% 3% 3% 3%;
+}
+
+.login-button-form-setup{
+    position: relative;
+    width: 38%;
+    top: 45%;
+    left: 23%;
+    margin: 3% 3% 3% 3%;
+}

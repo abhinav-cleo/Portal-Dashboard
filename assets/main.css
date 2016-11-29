@@ -1,0 +1,1505 @@
+/* fonts and sizes */
+/* colors */
+/* Contrasts */
+/* tables */
+/* buttons */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    background-color: #FFFFFF;
+}
+
+body .dialogPage {
+    background-color: #FFFFFF;
+}
+
+body a:focus {
+    outline: #f9f9f6 dotted thin;
+}
+
+#AjaxSwingModalPane {
+    background-color: transparent !important;
+}
+
+.border,
+.splitPane {
+    border: none;
+}
+
+div[style*="background-color:#868686"] {
+    background-color: transparent !important;
+}
+
+.scrollPane.border[style*="background-color:#ffffff"],
+.scrollPane.border[id*="Inner"] {
+    border: none !important;
+}
+
+.window {
+    background: #FFFFFF;
+}
+
+.label {
+    color: #504740;
+}
+
+input.text {
+    clip: initial !important;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+    border-color: #807e7c;
+}
+
+input.text[disabled] {
+    border-color: #d0d0ce;
+    color: #d0d0ce !important;
+}
+
+select.choice {
+    clip: initial !important;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+}
+
+select.choice[disabled] {
+    border-color: #d0d0ce;
+    color: #d0d0ce !important;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select.choice option {
+    color: #807e7c !important;
+}
+
+select.choice option:checked {
+    color: #504740;
+}
+
+/* ComboBox
+----------------------------------*/
+div.comboBoxCustomInput {
+    border: 1px solid black;
+}
+
+.comboBoxCustomInput input {
+    border: none;
+    color: black;
+}
+
+.comboBoxCustomInput .tableCell {
+    color: black;
+}
+
+.comboBoxCustomInput span {
+    color: black;
+}
+
+.comboBoxDropDownButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    padding: 0;
+}
+
+.comboBoxDropDownButton img {
+    margin-top: -2px;
+}
+
+.comboBoxCustomInput {
+    text-align: left;
+    padding-left: 3px;
+    padding-top: 1px;
+}
+
+input {
+    outline: none;
+    border: 1px solid black;
+    clip: initial !important;
+}
+
+input[type="file"],
+.text[type="file"] {
+    padding-left: 0px;
+    box-sizing: content-box;
+}
+
+textarea {
+    box-sizing: border-box;
+}
+
+textarea.text {
+    color: #504740 !important;
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    padding: 5px !important;
+    line-height: 24px !important;
+    border: 1px solid #d0d0ce !important;
+    clip: initial;
+}
+
+.Logs-Debug textarea {
+    top: 0 !important;
+}
+
+/* Internal frames */
+.window[modal="true"],
+.window[modal="false"],
+.window[frame="true"] {
+    position: absolute;
+    visibility: hidden;
+    overflow: visible;
+    margin: 0px;
+    color: #504740;
+    background-color: #FFFFFF;
+    border: 2px solid #d0d0ce;
+    margin: 0;
+    padding: 0;
+}
+
+.window[modal="true"] .windowCloseButton,
+.window[modal="false"] .windowCloseButton,
+.window[frame="true"] .windowCloseButton {
+    position: absolute;
+    overflow: hidden;
+    font-size: 7.8px;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    top: 1px !important;
+}
+
+.window[modal="true"] .windowCloseButton a img,
+.window[modal="false"] .windowCloseButton a img,
+.window[frame="true"] .windowCloseButton a img {
+    margin: 0px 3px 0 0;
+}
+
+.window[modal="true"] .windowBar,
+.window[modal="false"] .windowBar,
+.window[frame="true"] .windowBar {
+    color: #FFFFFF;
+    background: #655d56;
+    overflow: hidden;
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+    cursor: move;
+    text-indent: 15px;
+}
+
+.window[modal="true"] .windowBar img,
+.window[modal="false"] .windowBar img,
+.window[frame="true"] .windowBar img {
+    display: none;
+}
+
+.window[modal="true"] .windowMaximizeButton,
+.window[modal="false"] .windowMaximizeButton,
+.window[frame="true"] .windowMaximizeButton {
+    position: absolute;
+    overflow: hidden;
+    font-size: 7.8px;
+    width: 16px;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    color: #504740;
+    background-image: url("../images/ajaxswing/resize.gif");
+    cursor: pointer;
+}
+
+.window[modal="true"] .windowResizeButton,
+.window[modal="false"] .windowResizeButton,
+.window[frame="true"] .windowResizeButton {
+    position: absolute;
+    overflow: hidden;
+    font-size: 7.8px;
+    width: 11px;
+    height: 11px;
+    margin: 0;
+    padding: 0;
+    color: #504740;
+    background-image: url("../images/ajaxswing/resize-corner.gif");
+    cursor: se-resize;
+    z-index: 2000;
+}
+
+.window[modal="true"] .windowContent,
+.window[modal="false"] .windowContent,
+.window[frame="true"] .windowContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fx-shadow {
+    display: none;
+}
+
+/* Frame and dialog */
+.frame {
+    position: absolute;
+}
+
+.frameBorder {
+    border: 1px solid #655d56;
+    background-color: #f9f9f6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.framePage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.dialog {
+    background-color: #f9f9f6;
+    margin: 5px;
+}
+
+.dialogBorder {
+    border: 1px solid #655d56;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dialogPage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.title {
+    background-color: #d0d0ce;
+    text-align: left;
+}
+
+.titleText {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    height: 18px;
+}
+
+.preTitle {
+    width: 1px;
+}
+
+.ui-shadow {
+    position: relative;
+}
+
+.ui-shadow-color {
+    background: #504740;
+    position: absolute;
+}
+
+/* Can be overidden via js */
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog-buttonpane {
+    background-image: none;
+    border-color: #ebe9e8;
+    border-style: solid;
+    border-width: 1px 0 0;
+    margin: 0.5em 0 0;
+    padding: 3px 2px 5px 3px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.ui-dialog-buttonpane button {
+    float: right;
+}
+
+/* general table styles */
+table {
+    font-size: 13px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+table td {
+    /* Align has to be top otherwise absolutely positioned DIVs don't start at 0,0 */
+    vertical-align: top;
+}
+
+/* cannot locate tr.tableHeader anywhere. Can find tr td.tableHeader, but those shouldn't be center aligned */
+tr.tableHeader th div span {
+    text-align: center;
+}
+
+/*
+ * Also applies to tabulated options, such as Transfer Report Filter modal
+ */
+.table,
+.listtable {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* even rows on sortable tables */
+    /* odd rows on sortable tables*/
+    /*
+   * The row currently selected in any given table.
+   * Only applies to sortable tables.
+   * See: Transfer Reports
+   **/
+}
+
+.table .row-even,
+.listtable .row-even {
+    background: #FFFFFF;
+}
+
+.table .row-odd,
+.listtable .row-odd {
+    background: #f4f3f2;
+}
+
+.table .tableSelRow,
+.listtable .tableSelRow {
+    background: #fff1de;
+}
+
+.table .tableSelRow.row-even, .table .tableSelRow.row-odd,
+.listtable .tableSelRow.row-even,
+.listtable .tableSelRow.row-odd {
+    background: #fff1de;
+}
+
+.table .tableSelRow textarea,
+.listtable .tableSelRow textarea {
+    background-color: #f4f3f2 !important;
+}
+
+.table .tableSelRow div:not(.button),
+.listtable .tableSelRow div:not(.button) {
+    background-color: transparent !important;
+}
+
+.table td,
+.listtable td {
+    border-bottom: 1px solid #d0d0ce;
+    position: relative;
+    text-align: left;
+}
+
+.table td div:not(.button),
+.listtable td div:not(.button) {
+    background: transparent !important;
+}
+
+.table td .text,
+.listtable td .text {
+    background: #FFFFFF !important;
+}
+
+.table td .choice,
+.listtable td .choice {
+    background: #FFFFFF !important;
+}
+
+/* interior div in each td */
+.tableCell {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tableCell .checkbox {
+    white-space: nowrap;
+}
+
+.tableCell .checkbox label {
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.tableCell .choice {
+    border: none;
+}
+
+.tableCell table td {
+    border-bottom: 0px;
+}
+
+td span.tableHeader,
+td a.tableHeader {
+    background-color: #FFFFFF;
+}
+
+td a.tableHeader {
+    text-align: left;
+}
+
+/* heading before every table */
+td.tableHeader {
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+td.tableHeader div {
+    display: block;
+}
+
+td.tableHeader div[style*="position:relative"] {
+    position: absolute !important;
+    height: 100%;
+}
+
+td.tableHeader a {
+    color: #504740;
+    vertical-align: middle;
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+    margin-left: 1px;
+    margin-top: 1px;
+    font-weight: bold;
+}
+
+td.tableHeader a.tableHeader {
+    position: relative !important;
+}
+
+td.tableHeader a.tableHeader > img {
+    margin-right: 5px;
+}
+
+/* cannot locate any of the following yet */
+.tablePages {
+    text-align: left;
+    background-image: url("../images/ajaxswing/bg_scroll_h.png");
+}
+
+.tablePages div {
+    text-align: left;
+}
+
+.tablePage {
+    background-color: #f4f3f2;
+    color: black;
+    margin-left: 1px;
+    margin-right: 1px;
+    cursor: pointer;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url("../images/ajaxswing/bg_scroll.png");
+}
+
+.tablePage:hover {
+    background-color: #ebe9e8;
+}
+
+.tablePageSelected {
+    background-color: #f4f3f2;
+    color: black;
+    background-image: url("../images/ajaxswing/bg_scroll_curr.png");
+}
+
+.tablePageDisabled {
+    background-color: #807e7c;
+    color: #504740;
+}
+
+.tablePagesVertical {
+    background-image: url("../images/ajaxswing/bg_scroll.png");
+}
+
+.tablePagesVertical .tablePage {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: block;
+}
+
+.tableColumnResize {
+    cursor: col-resize;
+    display: block;
+    float: right;
+    font-size: 1px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 6px;
+    margin-top: -18px;
+    margin-left: 1px;
+    position: relative;
+    top: 0px;
+    z-index: 100;
+}
+
+.tablePageUp {
+    background-image: url("../images/ajaxswing/up.png");
+}
+
+.tablePageDown {
+    background-image: url("../images/ajaxswing/down.png");
+}
+
+.tablePageLeft {
+    background-image: url("../images/ajaxswing/left.png");
+}
+
+.tablePageRight {
+    background-image: url("../images/ajaxswing/right.png");
+}
+
+/* Table filter styles */
+.filterText {
+    width: 100%;
+}
+
+.inf {
+    clear: both;
+    width: auto;
+    height: 20px;
+    background: #eeeeee;
+    font-size: 13px;
+    margin: 0;
+    padding: 1px 3px 1px 3px;
+    border: 1px solid #d0d0ce;
+}
+
+.ldiv {
+    float: left;
+    width: 30%;
+    position: inherit;
+}
+
+.mdiv {
+    float: left;
+    width: 30%;
+    position: inherit;
+    text-align: center;
+}
+
+.rdiv {
+    float: right;
+    width: 30%;
+    position: inherit;
+    text-align: right;
+}
+
+.loader {
+    position: absolute;
+    padding: 15px 0 15px 0;
+    margin-top: 7%;
+    width: 200px;
+    left: 40%;
+    z-index: 1000;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #666;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.mdiv select {
+    height: 20px;
+}
+
+div.inf a {
+    color: #504740;
+}
+
+div.inf a:hover {
+    text-decoration: none;
+}
+
+.tot {
+    font-weight: bold;
+}
+
+tr[id*="TradingPartnersTable_"] *[style*="background-color:#FFFFFF"],
+tr[id*="RouterDialog_RouteTable_"] *[style*="background-color:#FFFFFF"] {
+    background-color: transparent !important;
+}
+
+.menuList td {
+    cursor: pointer;
+}
+
+.messageList .listtable .tableSelRow {
+    background: #fff1de;
+}
+
+.messageList .listtable td {
+    border-bottom: 1px solid #d0d0ce;
+}
+
+.Logs-SystemCounters .editorPane {
+    text-align: inherit;
+    padding: 0;
+}
+
+/** Tree control */
+.tree {
+    position: relative;
+    color: #504740;
+    background-color: #f4f3f2;
+}
+
+.tree input {
+    position: relative;
+    top: -4px;
+}
+
+.tree table div {
+    height: 22px;
+    white-space: nowrap;
+}
+
+.tableListElementContent div {
+    overflow: hidden;
+}
+
+.tableListElementContent img {
+    margin-right: 4px;
+}
+
+.tableTreeElementContent img {
+    margin-right: 4px;
+    vertical-align: text-top;
+}
+
+.tableTreeElementContent input {
+    top: 1px;
+}
+
+.tableTreeElementContent div {
+    display: inline;
+}
+
+.tableTreeElementContent table {
+    display: inline;
+}
+
+.tableTreeElement {
+    white-space: nowrap !important;
+}
+
+.tableTreeElement > img,
+.tableTreeElement > span {
+    float: none !important;
+}
+
+.tableTreeElement img {
+    cursor: pointer;
+}
+
+.tableTreeElement img[src*="Line.gif"] {
+    visibility: hidden;
+}
+
+.tableTreeElement .treeReg,
+.tableTreeElement .treeSel {
+    position: relative;
+    top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 22px;
+    height: 22px;
+    display: inline-block;
+}
+
+.tableTreeElement .treeReg span,
+.tableTreeElement .treeSel span {
+    padding: 2px;
+    color: #504740;
+}
+
+.tableTreeElement .treeReg span:hover,
+.tableTreeElement .treeSel span:hover {
+    background-color: #ebe9e8 !important;
+}
+
+.tableTreeElement .treeSel {
+    color: #504740;
+    background-color: transparent;
+}
+
+.tableTreeElement .treeSel span {
+    color: #504740;
+    background-color: #ebe9e8 !important;
+}
+
+.imgSel {
+    border: 2px solid #2eb8c3;
+}
+
+/* Accordion styles */
+/* cannot locate these in the current UI */
+.ui-accordion-container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #EEECE9;
+}
+
+.ui-accordion-container li {
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.ui-accordion-menu-1 {
+    text-align: left;
+    list-style: none;
+    padding: 6px;
+    margin: 0px;
+}
+
+.ui-accordion-menu-1 li {
+    color: #666666;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 4px 0pt;
+    margin: 0px;
+}
+
+.ui-accordion-menu-1 a {
+    color: #666666;
+    font-size: 13px;
+}
+
+.ui-accordion-menu-1 a:hover {
+    color: #0088CC;
+    text-decoration: underline;
+}
+
+.ui-accordion-menu-2 {
+    text-align: left;
+    list-style: none;
+    padding-left: 16px;
+    margin: 0px;
+}
+
+.ui-accordion-menu-2 li {
+    color: #666666;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 4px 0pt;
+    margin: 0px;
+}
+
+.ui-accordion-menu-2 a {
+    color: #666666;
+    font-size: 13px;
+}
+
+.ui-accordion-menu-2 a:hover {
+    color: #0088CC;
+    text-decoration: underline;
+}
+
+.ui-accordion-header {
+    display: block;
+    height: 28px;
+    background-image: url("../images/ajaxswing/accordion_handle_bg.png");
+    background-repeat: repeat-x;
+    color: #333333;
+    text-decoration: none;
+    line-height: 28px;
+    font-size: 13px;
+}
+
+.ui-accordion-header.selected {
+    display: block;
+    height: 28px;
+    background-image: url("../images/ajaxswing/accordion_handle_bg_selected.png");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    line-height: 28px;
+    font-size: 13px;
+}
+
+.ui-accordion-left {
+    display: block;
+}
+
+/* can't find this used anywhere, left alone */
+/* Slider styles */
+.ui-slider {
+    position: relative;
+}
+
+.ui-slider-h {
+    background-repeat: repeat-x;
+    background-position: left center;
+    background-image: url("../images/ajaxswing/slider-bg-h.png");
+}
+
+.ui-slider-v {
+    background-repeat: repeat-y;
+    background-image: url("../images/ajaxswing/slider-bg-v.png");
+    background-position-y: center;
+}
+
+.ui-slider-handle-h {
+    position: absolute;
+    z-index: 1;
+    height: 23px;
+    width: 12px;
+    top: 0px;
+    left: 0px;
+    background-image: url("../images/ajaxswing/slider-handle-h.gif");
+}
+
+.ui-slider-handle-v {
+    position: absolute;
+    z-index: 1;
+    height: 12px;
+    width: 23px;
+    top: 0px;
+    left: 0px;
+    background-image: url("../images/ajaxswing/slider-handle-v.gif");
+}
+
+.ui-slider-handle-active {
+    border: 1px dotted black;
+}
+
+.ui-slider-disabled .ui-slider-handle {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.ui-slider-range {
+    position: absolute;
+    background: #50A029;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    width: 100%;
+    height: 100%;
+}
+
+/* Slider
+----------------------------------*/
+.ui-slider-handle-h {
+    top: 50%;
+    margin-top: -12px;
+}
+
+.ui-slider-handle-v {
+    left: 5px;
+    margin-left: -12px;
+}
+
+.horizontalTick {
+    position: absolute;
+    top: 55%;
+}
+
+.verticalTick {
+    position: absolute;
+    left: 25px;
+}
+
+.horizontalLabel {
+    position: absolute;
+    top: 75%;
+}
+
+.verticalLabel {
+    position: absolute;
+    left: 40px;
+}
+
+.horizontalTickMinorInner {
+    background-color: black;
+}
+
+.horizontalTickMajorInner {
+    background-color: black;
+}
+
+.verticalTickMinorInner {
+    background-color: black;
+}
+
+.verticalTickMajorInner {
+    background-color: black;
+}
+
+/* can't find this used anywhere, left alone */
+.ui-tabs-panel {
+    background-color: #f4f3f2;
+    border: none;
+    border-top: 1px solid #d0d0ce;
+    border-bottom: 1px solid #d0d0ce;
+}
+
+.scrollPane.border {
+    background-color: white;
+    border: 1px solid #d0d0ce;
+}
+
+.tabbed-pane-wrapper[style*="left:0px"] .ui-tabs-panel,
+div[id*="LexBeanPanel"] .ui-tabs-panel,
+div[id*="ExchangeCerts"] .ui-tabs-panel,
+div[modal="true"] .ui-tabs-panel,
+div[id*="dialog"] .ui-tabs-panel,
+.IP-Filters .ui-tabs-panel {
+    background-color: #FFFFFF;
+}
+
+.ui-tabs-panel .table tr .text[disabled], .ui-tabs-panel .table tr .choice[disabled] {
+    background: transparent !important;
+}
+
+.ui-tabs-panel .table .button table td table {
+    width: 100%;
+}
+
+.ui-tabs-panel .table .button table td table * {
+    text-align: center;
+}
+
+/*
+ * The navigation at the top of tabbed content.
+ * Show up anywhere a user can navigate through several panels on the same page
+ */
+.ui-tabs-nav li {
+    background: #FFFFFF;
+    border: 1px solid #d0d0ce;
+    border-bottom: none;
+    font-weight: normal;
+}
+
+.ui-tabs-nav li:hover, .ui-tabs-nav li.ui-tabs-selected {
+    border-top: 2px solid #f58b00;
+}
+
+.ui-tabs-nav li:hover a,
+.ui-tabs-nav li:hover a:hover, .ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs-nav li.ui-tabs-selected a:hover {
+    color: #504740;
+    font-weight: bold;
+}
+
+.ui-tabs-nav li:hover {
+    /* background of the tab when a user hovers and/or is selected */
+    background: #FFFFFF;
+}
+
+.ui-tabs-nav li.ui-tabs-selected {
+    border-bottom: none;
+    background: #f9f9f6;
+}
+
+.ui-tabs-nav li a {
+    font-weight: normal;
+    color: #807e7c;
+    background: transparent;
+    font-size: 13px;
+    /* need to include the span element as some areas have backgrounds applied */
+}
+
+.ui-tabs-nav li a span {
+    background: none;
+}
+
+/*
+ * some modals don't use .button
+ * instead, they use input submits with names
+ * todo: examine possible use or whether to remain consistent
+ */
+.button,
+input[type="submit"] {
+    color: #FFFFFF;
+    background-color: #f58b00;
+    font-size: 13px;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c26e00;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover,
+input[type="submit"]:hover {
+    background-color: #dc7d00;
+    border-color: #8f5100;
+}
+
+.button *,
+input[type="submit"] * {
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+}
+
+.tableCell .button:not(.btn-non-enabled) {
+    background: #f58b00 !important;
+}
+
+.tableCell .button:not(.btn-non-enabled):hover {
+    background-color: #dc7d00 !important;
+}
+
+.tableCell .button.btn-non-enabled {
+    background-color: #ebe9e8 !important;
+}
+
+.button.btn-non-enabled,
+.button.btn-non-enabled:hover {
+    background-color: #ebe9e8;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0d0ce;
+    cursor: default;
+}
+
+.button.btn-non-enabled *,
+.button.btn-non-enabled:hover * {
+    color: #807e7c;
+    cursor: default;
+}
+
+.window[modal="true"] .button,
+.window[modal="true"] input[type="submit"],
+.window[modal="false"] .button,
+.window[modal="false"] input[type="submit"] {
+    border-width: 0px;
+}
+
+.btn-non-filled {
+    background-image: none;
+    background-color: transparent;
+}
+
+.btn-non-border {
+    border-width: 0px;
+}
+
+/*.tableCell .button {
+    background-color: transparent;
+    border-color: $orange;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid $orange !important;
+    width: auto !important;
+    padding: 0px 8px;
+    * {
+	color: $orange;
+    }
+    &:hover {
+	background-color: $orange;
+	border-color: darken($orange, 10%);
+	* {
+	    color: $white;
+	}
+    }
+}
+*/
+.label {
+    color: #504740;
+    background-color: transparent;
+    font-size: 13px;
+    margin-left: 0px;
+    margin-top: 1px;
+    display: block;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.wcPulldownMenu {
+    background-color: #FFFFFF;
+    padding: 0px;
+    position: absolute;
+    text-align: left;
+    visibility: hidden;
+    border: 1px solid #d0d0ce;
+    z-index: 100000;
+}
+
+.menuEnd {
+    background-color: #f4f3f2;
+    background-image: url("../images/ajaxswing/bg_menu_end.gif");
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.menu {
+    background-color: #f4f3f2;
+    border-bottom: 1px solid #655d56;
+    background-image: url("../images/ajaxswing/bg_menu.gif");
+    background-repeat: repeat-x;
+}
+
+.menu tbody tr td {
+    vertical-align: middle;
+}
+
+.menuTextSep {
+    border-top: 1px solid #655d56;
+    border-bottom: 1px solid #f4f3f2;
+    margin: 2px 0px 2px 0px;
+}
+
+.menuTextGrayed {
+    color: #655d56;
+    font-weight: normal;
+    font-size: 13px;
+    display: block;
+    margin: 0px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.menuHover {
+    color: #FFFFFF;
+    background-color: #2eb8c3;
+    font-size: 13px;
+}
+
+.menuButton {
+    color: #FFFFFF;
+    padding: 1px 3px 2px 3px;
+}
+
+.menuButton:hover {
+    color: #504740;
+    background-color: #fff1de;
+    font-size: 13px;
+}
+
+a.menuText {
+    color: #504740;
+    font-weight: normal;
+    font-size: 13px;
+    display: block;
+    margin: 0px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+a.menuText:hover {
+    background-color: #fff1de;
+    color: #504740;
+    font-size: 13px;
+}
+
+.submenuText {
+    color: #504740;
+    font-weight: normal;
+    font-size: 12px;
+    display: block;
+    margin: 0px;
+    padding: 2px;
+    padding-left: 12px;
+    padding-right: 20px;
+    background-image: url("../images/ajaxswing/menu-arrow-default.gif");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.submenuText:hover {
+    color: #504740;
+    background-color: #fff1de;
+    font-size: 12px;
+    font-weight: normal !important;
+    background-image: url("../images/ajaxswing/menu-arrow-hover.gif");
+}
+
+div.Logs-SystemCounters .editorPane table {
+    width: 75%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+div.Logs-SystemCounters .editorPane table th, div.Logs-SystemCounters .editorPane table td {
+    border: none;
+    text-align: left;
+    background: transparent !important;
+    padding: 5px 0;
+}
+
+div.Logs-SystemCounters .editorPane table:first-of-type {
+    background: #f9f9f6;
+    border-top: 10px solid #f9f9f6;
+    border-bottom: 10px solid #f9f9f6;
+}
+
+div.Logs-SystemCounters .editorPane table:first-of-type tr th {
+    padding: 5px 10px;
+    margin: 0;
+    font-weight: bold;
+    width: 15% !important;
+}
+
+div.Logs-SystemCounters .editorPane table:first-of-type tr td {
+    font-weight: normal;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr:nth-child(odd) {
+    background: #f4f3f2;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr:first-child, div.Logs-SystemCounters .editorPane table:last-child tr:last-child {
+    background: #f9f9f6;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr:first-child th, div.Logs-SystemCounters .editorPane table:last-child tr:last-child th {
+    font-weight: bold;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr:first-child {
+    border-bottom: 1px solid #cccbca;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr:last-child {
+    border-top: 1px solid #cccbca;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr td:first-child, div.Logs-SystemCounters .editorPane table:last-child tr th:first-child {
+    padding-left: 10px;
+}
+
+div.Logs-SystemCounters .editorPane table:last-child tr td:last-child, div.Logs-SystemCounters .editorPane table:last-child tr th:last-child {
+    padding-right: 10px;
+}
+
+.Logs-Event .listtable,
+div[id*="dialog"].window .listtable {
+    width: 100% !important;
+}
+
+.Logs-Event .listtable td,
+div[id*="dialog"].window .listtable td {
+    white-space: pre-wrap !important;
+}
+
+div[id^="JRootPane_"].Import .scrollPane.border {
+    border: 1px solid #d0d0ce !important;
+    background: initial !important;
+}
+
+div[id^="JRootPane_"].Import div.tableHeader td.tableHeader {
+    background: transparent !important;
+}
+
+div[id^="JRootPane_"].Import div.tableHeader td.tableHeader span.tableHeader {
+    line-height: 19px;
+    vertical-align: middle;
+    font-weight: bold;
+    text-indent: 10px;
+    background: #FFF;
+    border-top: 1px solid #d0d0ce;
+    border-left: 1px solid #d0d0ce;
+}
+
+div[id^="JRootPane_"].Import div.tableHeader td.tableHeader .tableColumnResize {
+    display: none;
+}
+
+.Options-Databases span.label[id*="JLabel_"] {
+    line-height: 15px;
+}
+
+.Options-Databases span.label[id*="JLabel_"] span {
+    font-weight: bold;
+}
+
+.Partners table.table[id*="TradingPartnersTable_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.VLNavigator .menu-bar,
+.VLNavigator .menuEnd {
+    background-color: #FFFFFF !important;
+}
+
+.VLNavigator > div[id^="nulllayeredPane_"] > div[id^="JPanel_"] > .splitPane {
+    /* host tree */
+    /* content pane */
+}
+
+.VLNavigator > div[id^="nulllayeredPane_"] > div[id^="JPanel_"] > .splitPane > div:nth-child(1) {
+    background: #f9f9f6 !important;
+}
+
+.VLNavigator > div[id^="nulllayeredPane_"] > div[id^="JPanel_"] > .splitPane > div:nth-child(1) div {
+    background: transparent !important;
+}
+
+.VLNavigator > div[id^="nulllayeredPane_"] > div[id^="JPanel_"] > .splitPane > div:nth-child(3) {
+    background: transparent !important;
+}
+
+.VLNavigator div[id^="VLNTree_"] img {
+    vertical-align: middle !important;
+}
+
+.VLNavigator div[id^="VLNTree_"] img ~ span > span {
+    padding: 0 5px !important;
+}
+
+.VLNavigator div[id^="VLNTree_"] .treeSel {
+    background: #ebe9e8;
+}
+
+.Transfers table.table[id*="TransferReportTable_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.Scheduler table.table[id*="ScheduleTable_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.Options-LDAP table[id*="SRVRecordsTable_"] .button[id*="SRVRecordsTable"] {
+    background-color: #f58b00 !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.Options-LDAP table[id*="SRVRecordsTable_"] .button[id*="SRVRecordsTable"]:hover {
+    background-color: #dc7d00 !important;
+}
+
+.Proxies table.table[id*="TcpIpPortTable_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+table.table[id*="XMLTable_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.rightPanel > div[id*="JScrollPane_"] > .scrollPane {
+    overflow: hidden !important;
+}
+
+.Certificates-Usage table.table[id*="CertificateUsageDialog_"] .tableCell span.label {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 16px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f58b00;
+    border-color: #c26e00;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #f58b00;
+    border-color: #c26e00;
+}
+
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #f58b00;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #f58b00;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #f58b00;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #f58b00;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #f58b00;
+    box-shadow: none;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */

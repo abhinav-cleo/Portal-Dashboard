@@ -9,13 +9,17 @@ dependencies:
   pre:
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update kubectl
-    - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/$PROJECT_NAME/harmonyangular2project/gcloud-service-key.json
+    - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/harmonyangular2project/gcloud-service-key.json
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
     # Reading the zone from the env var is not working so we set it here
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
     # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
 
 test:
+  override:
+    - mocha test --reporter mocha-junit-reporter:
+        environment:
+          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
   pre:
     - npm run backend-coverage
   post:

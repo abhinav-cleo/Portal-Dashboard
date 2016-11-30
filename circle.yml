@@ -1,6 +1,6 @@
 machine:
   environment:
-    PROJECT_NAME: CIS-Dev
+    PROJECT_NAME: harmony-151003
     CLOUDSDK_COMPUTE_ZONE: us-central1-c
     DEBIAN_FRONTEND: noninteractive
   services:

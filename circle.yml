@@ -16,6 +16,10 @@ dependencies:
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
 
 test:
+  override:
+    - mocha test --reporter mocha-junit-reporter:
+        environment:
+          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
   pre:
     - npm run backend-unit
   post:

@@ -1,4 +1,6 @@
 machine:
+  node:
+    version: 7.2.0
   environment:
     PROJECT_NAME: harmony-151003
     CLOUDSDK_COMPUTE_ZONE: us-central1-c
@@ -11,12 +13,7 @@ dependencies:
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update kubectl
     - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/harmonyangular2project/gcloud-service-key.json
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
-    # Reading the zone from the env var is not working so we set it here
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
-    # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
-    - sudo apt-get update --fix-missing
-    - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-    - sudo apt-get install nodejs
 
 test:
   override:

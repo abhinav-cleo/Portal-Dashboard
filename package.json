@@ -37,15 +37,12 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-beta.12",
     "systemjs": "0.19.39",
-    "zone.js": "^0.6.26"
-  },
-  "devDependencies": {
+    "zone.js": "^0.6.26",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.8",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.16.0",
     "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
     "canonical-path": "0.0.2",
     "commitizen": "^2.8.6",
     "concurrently": "^3.0.0",
@@ -74,7 +71,6 @@
     "remap-istanbul": "^0.7.0",
     "rimraf": "^2.5.4",
     "supertest": "^2.0.1",
-    "systemjs": "^0.19.39",
     "tslint": "^3.15.1",
     "typescript": "^2.0.10",
     "typings": "^1.4.0"

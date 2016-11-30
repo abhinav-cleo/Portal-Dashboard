@@ -17,9 +17,9 @@ dependencies:
 
 test:
   pre:
-    - npm run backend-coverage
-  post:
     - npm run backend-unit
+  post:
+    - npm run backend-coverage
 
 deployment:
   prod:

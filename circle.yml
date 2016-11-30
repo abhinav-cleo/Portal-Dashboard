@@ -14,6 +14,9 @@ dependencies:
     # Reading the zone from the env var is not working so we set it here
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
     # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
+    - sudo apt-get update --fix-missing
+    - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+    - sudo apt-get install nodejs
 
 test:
   override:

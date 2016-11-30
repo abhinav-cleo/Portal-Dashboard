@@ -10,7 +10,6 @@
     "tsc:w": "tsc -w",
     "typings": "typings",
     "commit": "git-cz",
-    "test": "npm run backend-unit \"npm run backend-coverage\"",
     "frontend-unit": "karma start karma.conf.js",
     "frontend-coverage": "http-server -c-1 -o -p 9875 ./FE_unitTest_Coverage/coverage",
     "backend-unit": "node_modules/.bin/mocha -R spec spec.js",

@@ -15,6 +15,12 @@ dependencies:
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
 
+test:
+  pre:
+    - npm run backend-unit
+  post:
+    - npm run backend-coverage
+
 deployment:
   prod:
     branch: master

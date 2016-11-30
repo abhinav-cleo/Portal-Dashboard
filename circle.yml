@@ -17,13 +17,13 @@ dependencies:
 
 test:
   override:
-    - node_modules/.bin/mocha test --reporter mocha-junit-reporter:
+    - node_modules/.bin/mocha spec --reporter mocha-junit-reporter:
         environment:
           MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
   pre:
     - npm run backend-unit
-  post:
     - npm run backend-coverage
+
 
 deployment:
   prod:

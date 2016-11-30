@@ -1,5 +1,29 @@
+machine:
+  environment:
+    PROJECT_NAME: CIS-Dev
+    CLOUDSDK_COMPUTE_ZONE: us-central1-c
+    DEBIAN_FRONTEND: noninteractive
+  services:
+
+dependencies:
+  pre:
+    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update kubectl
+    - echo $ACCT_AUTH | base64 --decode -i > ${HOME}/gcloud-service-key.json
+    - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+    - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
+    # Reading the zone from the env var is not working so we set it here
+    - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
+    # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
+
+test:
+  pre:
+    - npm run backend-coverage
+  post:
+    - npm run backend-unit
+
 deployment:
-  staging:
+  prod:
     branch: master
-    heroku:
-      appname: harmonyapppoc
+    commands:
+      - ./deploy.sh

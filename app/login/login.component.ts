@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import {APIService} from "../api.service";
-import {ToastsManager} from "ng2-toastr/ng2-toastr";
 import {Response} from "@angular/http";
+import {ToasterService} from "angular2-toaster";
 
 @Component({
     templateUrl: 'app/login/login.html'
@@ -12,7 +12,7 @@ export class LoginComponent {
     private user: string;
     private password: string;
 
-    constructor(private router: Router, private _backend: APIService, public toastr: ToastsManager) {
+    constructor(private router: Router, private _backend: APIService, private toasterService: ToasterService) {
     }
 
     signed() {
@@ -27,19 +27,19 @@ export class LoginComponent {
                     Cookie.set('session',JSON.parse(data["_body"]).message);
                     Cookie.set('expires',JSON.parse(data["_body"]).expires);
                     if(JSON.parse(data["_body"]).status == 1){
-                        this.toastr.success("Successfully Logged In");
                         this.router.navigate(['/main']);
+                        this.toasterService.pop('success', 'Successfully Logged In', 'Successfully Logged In');
                     }
                     else {
                         this.user = '';
-                        this.toastr.error('Sorry Unable to Connect to Harmony Servers');
+                        this.toasterService.pop('error','Sorry Unable to Connect to Harmony Servers', 'Sorry Unable to Connect to Harmony Servers');
                         this.router.navigate(['/login']);
                     }
                 },
                 error => {
                     Cookie.delete('session')
                     Cookie.set('session',JSON.stringify(error));
-                    this.toastr.error('Wrong Credentials');
+                    this.toasterService.pop('error','Wrong Credentials', 'Wrong Credentials');
                     this.router.navigate(['/login']);
                 },
                 () => console.log('Logging in Complete')
@@ -52,7 +52,6 @@ export class LoginComponent {
 
     validateEmail(newValue){
         if(!newValue || (newValue == '')){
-            this.toastr.warning("Valid Email is required");
             return false;
         }
         else {

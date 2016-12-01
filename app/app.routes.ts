@@ -2,16 +2,15 @@ import {ModuleWithProviders} from "@angular/core";
 import {Routes, RouterModule} from "@angular/router";
 import {ServiceAdministrationDetails} from "./main/administration/serviceprovider/sp.component";
 import {IdentityAdministrationDetails} from "./main/administration/identityprovider/idp.component";
-import {HostsComponent} from './main/hosts/hosts.component';
-import {SchedulerComponent} from './main/scheduler/scheduler.component';
-import {RouterComponent} from './main/router/router.component';
-import {PartnersComponent} from './main/partners/partners.component';
-import {TransfersComponent} from './main/transfers/transfers.component';
-import {LogsComponent} from './main/logs/logs.component';
-import {AdministrationComponent} from './main/administration/administration.component';
+import {HostsComponent} from "./main/hosts/hosts.component";
+import {SchedulerComponent} from "./main/scheduler/scheduler.component";
+import {RouterComponent} from "./main/router/router.component";
+import {PartnersComponent} from "./main/partners/partners.component";
+import {TransfersComponent} from "./main/transfers/transfers.component";
+import {LogsComponent} from "./main/logs/logs.component";
+import {AdministrationComponent} from "./main/administration/administration.component";
 import {LoginComponent} from "./login/login.component";
 import {MainComponent} from "./main/main.component";
-import {AuthGuard} from "./auth-guard.service";
 import {LoginRouteGuard} from "./login-route-guard";
 
 export const routes: Routes = [

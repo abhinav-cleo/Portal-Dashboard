@@ -26,6 +26,7 @@
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
             'ng2-cookies': 'npm:ng2-cookies',
+            'angular2-toaster': 'npm:angular2-toaster'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -43,7 +44,11 @@
             'ng2-cookies': {
                 main: 'ng2-cookies.js',
                 defaultExtension: 'js'
-            }
+            },
+        'angular2-toaster': {
+            main: 'angular2-toaster.js',
+            defaultExtension: 'js'
+        }
         }
     });
 })(this);

@@ -3,7 +3,6 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {HttpModule, JsonpModule} from "@angular/http";
-import {ToastModule} from "ng2-toastr/ng2-toastr";
 import {AppComponent} from "./app.component";
 import {ServiceAdministrationDetails} from "./main/administration/serviceprovider/sp.component";
 import {IdentityAdministrationDetails} from "./main/administration/identityprovider/idp.component";
@@ -20,12 +19,13 @@ import {LoginComponent} from "./login/login.component";
 import {MainComponent} from "./main/main.component";
 import {LoginRouteGuard} from "./login-route-guard";
 import {SignatureModal} from "./main/administration/serviceprovider/partials/signature.component";
+import {ToasterModule} from "angular2-toaster";
 
 @NgModule({
     imports: [
         BrowserModule,
+        ToasterModule,
         NgbModule.forRoot(),
-        ToastModule,
         FormsModule,
         HttpModule,
         JsonpModule,

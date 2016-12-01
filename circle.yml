@@ -29,4 +29,5 @@ deployment:
   prod:
     branch: master
     commands:
-      - sudo ./deploy.sh
+      - sudo chmod 777 deploy.sh
+      - sudo sh deploy.sh
